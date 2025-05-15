@@ -2,15 +2,25 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { addDoc, collection, doc, getDoc, getDocs, getFirestore, onSnapshot, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyANw2cAih982NdfIoPLSHN8hYomDFl9s70",
-    authDomain: "chat-app-2e9c9.firebaseapp.com",
-    projectId: "chat-app-2e9c9",
-    storageBucket: "chat-app-2e9c9.firebasestorage.app",
-    messagingSenderId: "444449458629",
-    appId: "1:444449458629:web:e610c576249f715d1d63ac",
+  apiKey: "AIzaSyBlNM-czij5SX5BMLaetTUq_wGi9IxWRtc",
+  authDomain: "owlvibes-iare.firebaseapp.com",
+  projectId: "owlvibes-iare",
+  storageBucket: "owlvibes-iare.firebasestorage.app",
+  messagingSenderId: "595916060737",
+  appId: "1:595916060737:web:9babba7c0140e8c84d6ec0",
+  measurementId: "G-N6NPW7H3KV"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
